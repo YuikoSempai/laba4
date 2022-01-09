@@ -3,7 +3,7 @@ package src.AbsClass;
 import src.Location;
 
 public abstract class Item extends Thing {
-    abstract public void use();
+    abstract public void use(String s);
     abstract public String getStatus();
 
     public void setLocation(Location loc) {

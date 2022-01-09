@@ -35,7 +35,7 @@ public class Location implements LocationInterface {
             this.listThing.add(o1);
         } else {
             throw new LocationOverFlow(o1.getName() + " не может быть добавлен в локацию " + this.getName());
-        } // Попробовать выкинуть ошибку!
+        }
 
     }
 

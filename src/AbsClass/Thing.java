@@ -8,8 +8,6 @@ public abstract class Thing {
     protected String name;
     protected Location location;
 
-
-    
     @Override
     public boolean equals(final Object o) {
         if (this == o)
@@ -30,11 +28,11 @@ public abstract class Thing {
         return this.name + "|" + this.getClass();
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
-    public Location getLocation(){
+    public Location getLocation() {
         return this.location;
     }
 }

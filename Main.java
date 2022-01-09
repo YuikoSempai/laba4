@@ -1,5 +1,7 @@
+import src.InvalidPhoneNumberException;
 import src.Karlson;
 import src.Location;
+import src.Telephone;
 // import src.Person;
 import src.AbsClass.*;
 
@@ -18,13 +20,18 @@ public class Main {
             String doorStatus = "Closed";
 
             @Override
-            public void use() {
-                if (doorStatus == "Closed") {
-                    doorStatus = "Open";
-                    System.out.println("Door is open now");
-                } else {
-                    doorStatus = "Closed";
-                    System.out.println("Door is closed now");
+            public void use(String status) {
+                status = status.toLowerCase();
+                if(status == "open"){
+                    doorStatus="open";
+                    System.out.println("door is closed now");
+                }
+                if(status == "close"){
+                    doorStatus = "close";
+                    System.out.println("door is closed now");
+                }
+                if(status == "knock"){
+                    System.out.println("стук в дверь");
                 }
             }
 
@@ -34,14 +41,22 @@ public class Main {
             }
         };
 
-        kar.use(door);
+        kar.use(door,"knock");
         System.out.println(door.getStatus());
-        door.use();
+        door.use("knock");
         try {
             for (Thing i : kitchen.getAllThing()) {
                 System.out.print(i.getName() + " ");
             }
+            System.out.println();
         } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        Telephone test = new Telephone("Сотовый", room);
+        try{
+            test.call("+79111274352");
+        }catch(InvalidPhoneNumberException e){
             System.out.println(e);
         }
     }
@@ -57,4 +72,4 @@ public class Main {
 // inner class: Vint in Karlson.java
 // Anonymous class: Predmet door = new Predmet(){} in Main.java
 // Static nested class: Location.java public static class LocationInfo
-// Method-local Inner class:
+// Method-local Inner class: Telephone.java

@@ -59,8 +59,8 @@ public class Person extends Thing implements SayAble {
         System.out.println(this.name + " переместил " + predmet.getName() + " в " + loc.getName());
     }
 
-    public void use(Item item){
+    public void use(Item item, String move){
         System.out.println(this.name + " использует " + item.getName());
-        item.use();
+        item.use(move);
     }
 }
