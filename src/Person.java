@@ -1,7 +1,8 @@
 package src;
 
+import src.AbsClass.Item;
+import src.AbsClass.Thing;
 import src.Interfaces.SayAble;
-import src.AbsClass.*;
 
 import java.util.Objects;
 
