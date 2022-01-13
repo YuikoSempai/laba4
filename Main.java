@@ -1,11 +1,7 @@
-import java.io.ObjectInputFilter.Status;
-
 import src.InvalidPhoneNumberException;
 import src.Karlson;
 import src.Location;
-import src.Person;
 import src.Telephone;
-// import src.Person;
 import src.AbsClass.*;
 import src.Interfaces.DoorInterface;
 
