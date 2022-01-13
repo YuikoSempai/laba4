@@ -29,7 +29,7 @@ public class Location implements LocationInterface {
     }
 
     @Override
-    public void addThing(final Thing o1) throws LocationOverFlow {
+    public void addThing(final Thing o1){
         if (count != Location.maxPersonCount) {
             this.count += 1;
             this.listThing.add(o1);

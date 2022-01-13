@@ -1,9 +1,13 @@
+import java.io.ObjectInputFilter.Status;
+
 import src.InvalidPhoneNumberException;
 import src.Karlson;
 import src.Location;
+import src.Person;
 import src.Telephone;
 // import src.Person;
 import src.AbsClass.*;
+import src.Interfaces.DoorInterface;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,34 +20,25 @@ public class Main {
         kar.move(kitchen);
         System.out.println(kar.getLocation().getName());
 
-        Item door = new Item("Door", room) {
+        DoorInterface door = new DoorInterface() {
             String doorStatus = "Closed";
 
-            @Override
-            public void use(String status) {
-                status = status.toLowerCase();
-                if(status == "open"){
-                    doorStatus="open";
-                    System.out.println("door is closed now");
-                }
-                if(status == "close"){
-                    doorStatus = "close";
-                    System.out.println("door is closed now");
-                }
-                if(status == "knock"){
-                    System.out.println("стук в дверь");
-                }
+            public void open() {
+                doorStatus = "Open";
             }
 
-            @Override
-            public String getStatus() {
+            public void close() {
+                doorStatus = "Closed";
+            }
+
+            public String getDoorStatus() {
                 return doorStatus;
             }
         };
 
-        kar.use(door,"knock");
-        System.out.println(door.getStatus());
-        door.use("knock");
+        door.open();
+        System.out.println(door.getDoorStatus());
+        door.close();
         try {
             for (Thing i : kitchen.getAllThing()) {
                 System.out.print(i.getName() + " ");
@@ -54,21 +49,20 @@ public class Main {
         }
 
         Telephone test = new Telephone("Сотовый", room);
-        try{
+        try {
             test.call("+79111274352");
-        }catch(InvalidPhoneNumberException e){
+        } catch (InvalidPhoneNumberException e) {
             System.out.println(e);
         }
     }
-
 }
 // Добавлено проверяемое исключение ArrayListException in Location.java in
 // getAllPerson()
 // Добавлено не проверяемое исключение LocationOverFlow in Location.java in
 // addPerson()
-// Переделать метод getAllPerson in Location.java
-// Попробовать придумать как перемещать в доступную локацию персонажей при
-// выбросе исключения LocationCountException
+// Переделать метод getAllPerson in Location.java +
+// Попробовать придумать как перемещать в доступную локацию персонажей при +
+// выбросе исключения LocationCountException +
 // inner class: Vint in Karlson.java
 // Anonymous class: Predmet door = new Predmet(){} in Main.java
 // Static nested class: Location.java public static class LocationInfo
