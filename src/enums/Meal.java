@@ -5,12 +5,15 @@ import java.util.Arrays;
 public enum Meal {
     MEAT("Мясо"),
     BREAD("Хлеб"),
-    SALAD("Салат");
+    SALAT("Салат");
 
     private String name;
 
     Meal(String name) {
         this.name = name;
+    }
+
+    Meal() {
     }
 
     public String getName() {

@@ -4,13 +4,15 @@ import src.Location;
 import src.Telephone;
 import src.AbsClass.*;
 import src.Interfaces.DoorInterface;
+import src.Person;
+import java.lang.reflect.*;
 
 public class Main {
     public static void main(String[] args) {
         Location room = new Location("Комната");
         Location kitchen = new Location("Кухня");
-        System.out.println(Location.LocationInfo.getMaxCountPerson());
-        // Person human = new Person("Иван", room);
+        System.out.println(Location.LocationInfo.getMaxThingCount());
+        Person human = new Person("Иван", room);
         Karlson kar = new Karlson("Карлсон", room);
         System.out.println(kar.vint.getVintStatus());
         kar.move(kitchen);
@@ -46,11 +48,13 @@ public class Main {
 
         Telephone test = new Telephone("Сотовый", room);
         try {
-            test.call("+79111274352");
+            test.call("+7911127435552");
         } catch (InvalidPhoneNumberException e) {
             System.out.println(e);
         }
+
     }
+
 }
 // Добавлено проверяемое исключение ArrayListException in Location.java in
 // getAllPerson()

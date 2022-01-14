@@ -2,9 +2,7 @@ package src.AbsClass;
 
 import src.Location;
 
-public abstract class Item extends Thing {
-    abstract public String getStatus();
-
+public class Item extends Thing {
     public void setLocation(Location loc) {
         this.location = loc;
     }

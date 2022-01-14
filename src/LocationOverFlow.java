@@ -1,7 +1,7 @@
 package src;
 
-public class LocationOverFlow extends Error {
+public class LocationOverFlow extends RuntimeException {
     public LocationOverFlow(String message){
-        super(message);
+        super(message + " now location = null");
     }
 }

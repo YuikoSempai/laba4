@@ -2,11 +2,11 @@ package src;
 
 import src.AbsClass.Item;
 import src.AbsClass.Thing;
-import src.Interfaces.SayAble;
+import src.Interfaces.PersonInterface;
 
 import java.util.Objects;
 
-public class Person extends Thing implements SayAble {
+public class Person extends Thing implements PersonInterface {
 
     public Person(final String name, final Location loc) {
         this.name = name;
@@ -55,8 +55,8 @@ public class Person extends Thing implements SayAble {
         System.out.println(this.getName() + " переместился в " + this.location.getName());
     }
 
-    public void movePredmet(Item predmet, Location loc) {
-        predmet.setLocation(loc);
-        System.out.println(this.name + " переместил " + predmet.getName() + " в " + loc.getName());
+    public void moveItem(Item item, Location loc) {
+        item.setLocation(loc);
+        System.out.println(this.name + " переместил " + item.getName() + " в " + loc.getName());
     }
 }

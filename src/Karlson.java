@@ -13,10 +13,6 @@ public class Karlson extends FairyPerson {
     public class Vint {
         private String vintStatus = "Off";
 
-        public void setVintStatus(String vintStatus) {
-            this.vintStatus = vintStatus;
-        }
-
         public String getVintStatus() {
             return vintStatus;
         }
@@ -30,5 +26,12 @@ public class Karlson extends FairyPerson {
             this.vintStatus = "Off";
             System.out.println("Vint off");
         }
+    }
+
+    public void move(Location loc) {
+        loc.addThing(this);
+        System.out.println(loc.getCount());
+        this.location = loc;
+        System.out.println(this.getName() + " переместился в " + this.location.getName());
     }
 }

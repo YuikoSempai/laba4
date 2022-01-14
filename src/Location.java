@@ -7,8 +7,8 @@ import src.AbsClass.*;
 public class Location implements LocationInterface {
 
     final String name;
-    public int count = 0;
-    final private static int maxPersonCount = 5;
+    private int count = 0;
+    private static int maxThingCount = 5;
 
     @Override
     public int getCount() {
@@ -30,7 +30,7 @@ public class Location implements LocationInterface {
 
     @Override
     public void addThing(final Thing o1){
-        if (count != Location.maxPersonCount) {
+        if (count != Location.maxThingCount) {
             this.count += 1;
             this.listThing.add(o1);
         } else {
@@ -43,15 +43,10 @@ public class Location implements LocationInterface {
         this.name = name;
     }
 
-    public Location(final String name, final int count) {
-        this.name = name;
-        this.count = count;
-    }
-
     public static class LocationInfo {
 
-        public static int getMaxCountPerson() {
-            return maxPersonCount;
+        public static int getMaxThingCount() {
+            return maxThingCount;
         }
     }
 }

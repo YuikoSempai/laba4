@@ -3,13 +3,11 @@ package src;
 import src.AbsClass.Thing;
 
 public class Telephone extends Thing {
-    String name;
 
     public Telephone(String name, Location loc) {
         this.name = name;
         this.location = loc;
     }
-
     public void call(String number) throws InvalidPhoneNumberException {
 
         class PhoneNumber {
@@ -30,5 +28,10 @@ public class Telephone extends Thing {
         }
         PhoneNumber phoneNumber = new PhoneNumber(number);
         System.out.println("звонок абоненту +" + phoneNumber.getNumber());
+    }
+
+    private String countryCode = "+7";
+    private void printCountryCode(){
+        System.out.println(countryCode);
     }
 }
