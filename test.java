@@ -43,4 +43,14 @@ public class test {
             e.printStackTrace();
         }
     }
+    // //обращение к private method
+    // public static void printCountryCode(Object telephone){
+    //     try {
+    //         Method method = telephone.getClass().getDeclaredMethod("printCountryCode");
+    //         method.setAccessible(true);
+    //         method.invoke(telephone);
+    //     } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
+    //         e.printStackTrace();
+    //     }
+    // }
 }
