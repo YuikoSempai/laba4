@@ -2,8 +2,8 @@ import src.InvalidPhoneNumberException;
 import src.Karlson;
 import src.Location;
 import src.Telephone;
-import src.AbsClass.*;
-import src.Interfaces.DoorInterface;
+import src.absClass.*;
+import src.interfaces.DoorInterface;
 import src.Person;
 import java.lang.reflect.*;
 

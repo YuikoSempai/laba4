@@ -1,8 +1,9 @@
 package src;
 
 import java.util.ArrayList;
-import src.Interfaces.LocationInterface;
-import src.AbsClass.*;
+
+import src.absClass.*;
+import src.interfaces.LocationInterface;
 
 public class Location implements LocationInterface {
 

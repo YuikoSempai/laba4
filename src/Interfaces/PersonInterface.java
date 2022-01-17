@@ -1,7 +1,7 @@
-package src.Interfaces;
+package src.interfaces;
 
 import src.Location;
-import src.AbsClass.Item;
+import src.absClass.Item;
 
 public interface PersonInterface {
 

@@ -1,6 +1,6 @@
 package src;
 
-import src.AbsClass.Thing;
+import src.absClass.Thing;
 
 public class Telephone extends Thing {
 

@@ -1,4 +1,4 @@
-package src.AbsClass;
+package src.absClass;
 
 import java.util.Objects;
 import src.Location;

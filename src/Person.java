@@ -1,8 +1,8 @@
 package src;
 
-import src.AbsClass.Item;
-import src.AbsClass.Thing;
-import src.Interfaces.PersonInterface;
+import src.absClass.Item;
+import src.absClass.Thing;
+import src.interfaces.PersonInterface;
 
 import java.util.Objects;
 

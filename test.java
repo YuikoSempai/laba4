@@ -7,7 +7,7 @@ public class test {
         Location room = new Location("room");
         Telephone telephone = new Telephone("test", room);
         String number = "";
-
+        
         //Обращение к private field
         try {
             Field field = telephone.getClass().getDeclaredField("countryCode");// Получения поля с именем countryCode
@@ -16,7 +16,7 @@ public class test {
             number = (String) field.get(telephone);//сохранение значения этого поля. Изначально оно имеет тип Object, поэтому мы переносим его в String
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.getStackTrace();//Получение стек-трейса на текущий момент
-        }
+        }   
         System.out.println(number);
         printCountryCode(telephone);
 
@@ -28,9 +28,9 @@ public class test {
             telephone2 = (Telephone) clazz.getDeclaredConstructor(parametrs).newInstance("test",room);
         } catch (Exception e) {
             e.getStackTrace();
-            //TODO: handle exception
         }
-        System.out.print(telephone2);
+        System.out.println(telephone2);
+        System.out.println(Telephone.class.getName());
     }
 
     //обращение к private method

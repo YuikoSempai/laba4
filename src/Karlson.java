@@ -1,6 +1,6 @@
 package src;
 
-import src.AbsClass.FairyPerson;
+import src.absClass.FairyPerson;
 
 public class Karlson extends FairyPerson {
 

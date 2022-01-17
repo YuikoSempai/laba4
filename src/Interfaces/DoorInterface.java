@@ -1,4 +1,4 @@
-package src.Interfaces;
+package src.interfaces;
 
 public interface DoorInterface {
     public void close();
