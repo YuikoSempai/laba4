@@ -5,7 +5,6 @@ import src.Telephone;
 import src.absClass.*;
 import src.interfaces.DoorInterface;
 import src.Person;
-import java.lang.reflect.*;
 
 public class Main {
     public static void main(String[] args) {

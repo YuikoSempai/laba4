@@ -2,7 +2,7 @@ import src.Telephone;
 import src.Location;
 import java.lang.reflect.*;
 
-public class test {
+public class Test {
     public static void main(String[] args) {
         Location room = new Location("room");
         Telephone telephone = new Telephone("test", room);
