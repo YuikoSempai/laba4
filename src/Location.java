@@ -37,16 +37,26 @@ public class Location implements LocationInterface {
         } else {
             throw new LocationOverFlow(o1.getName() + " не может быть добавлен в локацию " + this.getName());
         }
-
     }
 
     public Location(final String name) {
         this.name = name;
     }
 
-    public static class LocationInfo {
+    public static class Room extends Location {
+        public Room(String name) {
+            super(name);
+        }
+    }
 
-        public static int getMaxThingCount() {
+    public static class Kitchen extends Location {
+        public Kitchen(String name) {
+            super(name);
+        }
+    }
+
+    public static class LocationInfo{
+        public static int getMaxThingCount(){
             return maxThingCount;
         }
     }
