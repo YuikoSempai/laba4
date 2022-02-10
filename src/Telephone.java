@@ -8,6 +8,7 @@ public class Telephone extends Thing {
         this.name = name;
         this.location = loc;
     }
+
     public void call(String number) throws InvalidPhoneNumberException {
 
         class PhoneNumber {
@@ -31,7 +32,8 @@ public class Telephone extends Thing {
     }
 
     private String countryCode = "+7";
-    private void printCountryCode(){
+
+    private void printCountryCode() {
         System.out.println(countryCode);
     }
 }
